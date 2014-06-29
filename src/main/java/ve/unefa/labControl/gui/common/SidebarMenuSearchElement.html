@@ -1,0 +1,25 @@
+<html xmlns:wicket>
+<!-- SidebarSearchElement Example
+<li wicket:id="sidebarSearch" id="search">
+	<h2 wicket:id="searchTitle">Buscar coordinación</h2>
+	<form id="searchform" method="get" action="">
+		<div>
+			<input type="text" name="s" id="s" size="15" />
+			<br />
+			<input name="submit" type="submit" value="Buscar" />
+		</div>
+	</form>
+</li>
+-->
+<wicket:panel>
+<h2 wicket:id="searchTitle"></h2>
+<form wicket:id="searchForm" class="searchform" method="get" action="">
+	<div>
+		<input wicket:id="searchString" type="text" name="s" id="s" size="15" />
+		<br />
+		<input wicket:id="searchSubmit" name="submit" type="submit" value="Buscar" />
+	</div>
+</form>
+</wicket:panel>
+</html>
+  

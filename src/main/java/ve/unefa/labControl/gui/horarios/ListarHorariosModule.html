@@ -1,0 +1,20 @@
+<html xmlns:wicket>
+<wicket:panel>
+<h2 class="title">Horarios</h2>
+<center>
+	<div class="entry anadirEntry">
+		<form wicket:id="horarioLookupForm">
+			<p>Laboratorio:<select wicket:id="horarioLookupFormLab"></select></p>
+			<p>Semana:<select wicket:id="horarioLookupFormWeek"></select></p>
+			<p>
+				<input wicket:id="horarioLookupFormSubmit" type="submit" value="Buscar" />
+				<input type="reset" value="Limpiar Datos" />
+			</p>
+			<p><span wicket:id="horarioLookupFormError"></span></p>
+		</form>
+	</div>
+</center>
+<div wicket:id="horarioTable" class="entry"></div>
+</wicket:panel>
+</html>
+  

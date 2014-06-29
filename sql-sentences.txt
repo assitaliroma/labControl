@@ -1,0 +1,50 @@
+COORDINACIONES
+
+AGREGAR INSERT INTO coordinaciones VALUES
+	(upper(coord_id),initcap(coord_career),coord_tel,initcap(coord_coord),initcap(coord_shift));
+
+BUSCAR - LISTAR SELECT id, carrera, telefono, coordinador, turno FROM coordinaciones WHERE id LIKE upper('%search_string%') OR lower(carrera) LIKE lower('%search_string%') ORDER BY carrera ASC;
+
+------------------------------
+LABORATORIOS
+
+AGREGAR INSERT INTO laboratorios VALUES (nextval('laboratorio_seq'),initcap(lab_name),lab_cap);
+
+BUSCAR - LISTAR SELECT id, nombre, capacidad FROM laboratorios WHERE lower(nombre) LIKE lower('%search_string%') ORDER BY nombre ASC;
+
+------------------------------
+PROFESORES
+
+AGREGAR INSERT INTO profesores VALUES (nextval('profesores_seq'),initcap(nombre),initcap(periodo),telefono,initcap(turno),upper(coordinacion_id));
+
+BUSCAR - LISTAR SELECT id, nombre, periodo, telefono, turno, coordinacion_id FROM profesores WHERE lower(nombre) LIKE lower('%search_string%') ORDER BY nombre ASC;
+------------------------------
+MATERIAS
+
+AGREGAR INSERT INTO materias VALUES (upper(id),initcap(nombre),upper(coordinacion_id));
+
+BUSCAR - LISTAR SELECT id, nombre, coordinacion_id FROM materias WHERE id LIKE upper('%search_string%') OR lower(nombre) LIKE lower('%search_string%') ORDER BY nombre ASC;
+
+------------------------------
+HORARIOS
+
+AGREGAR
+
+LISTAR_FILTRO_POR_MES
+
+LISTAR_TODOS
+
+------------------------------
+TURNOS
+
+AGREGAR INSERT INTO turnos VALUES (initcap('name'),lower('description'));
+
+LISTAR SELECT turno_key, turno_description FROM turnos ORDER BY turno_key;
+
+------------------------------
+PERIODOS
+
+AGREGAR INSERT INTO periodos VALUES (initcap('name'),lower('description'));
+
+LISTAR SELECT periodo_key, periodo_description FROM periodos ORDER BY periodo_key;
+

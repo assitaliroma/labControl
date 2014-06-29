@@ -1,0 +1,33 @@
+<html xmlns:wicket>
+<wicket:panel>
+<h2 class="title">Añadir Horario</h2>
+<div class="entry anadirEntry">
+	<form wicket:id="anadirHorarioForm">
+		<p>Coordinacion:<select wicket:id="anadirHorarioFormCoord"></select></p>
+		<p>Profesor:<select wicket:id="anadirHorarioFormProf"></select></p>
+		<p>Materia:<select wicket:id="anadirHorarioFormMat"></select></p>
+		<p>Laboratorio:<select wicket:id="anadirHorarioFormLab"></select></p>
+		<p>Tipo de reservación:<select wicket:id="anadirHorarioFormType"></select></p>
+		<br/>
+<!--		<p><b>Desde:</b></p>-->
+		<p wicket:id="anadirHorarioFormStartDateContainer">
+			Fecha inicio:<input wicket:id="anadirHorarioFormStartDate" type="text"></input>
+		</p>
+		<p wicket:id="anadirHorarioFormEndDateContainer">
+			Fecha fin:<input wicket:id="anadirHorarioFormEndDate" type="text"></input>
+		</p>
+		<br/>
+<!--		<p><b>Hasta:</b></p>-->
+		<p>Hora inicio:<select wicket:id="anadirHorarioFormStartHour"></select></p>
+		<p>Hora fin:<select wicket:id="anadirHorarioFormEndHour"></select></p>
+		<p>Descripción (opcional):<input wicket:id="anadirHorarioFormDesc" type="text"></input></p>
+		<p>
+			<input wicket:id="anadirHorarioFormSubmit" type="submit" value="Añadir" />
+			<input type="reset" value="Limpiar Datos" />
+		</p>
+		<p><span wicket:id="anadirHorarioFormError"></span></p>
+	</form>
+</div>
+</wicket:panel>
+</html>
+  

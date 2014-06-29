@@ -1,0 +1,20 @@
+<html xmlns:wicket>
+<wicket:panel>
+<h2 class="title">Añadir Coordinación</h2>
+<div class="entry anadirEntry">
+	<form wicket:id="anadirCoordForm">
+		<p>ID:<input wicket:id="anadirCoordFormId" type="text"></input></p>
+		<p>Nombre:<input wicket:id="anadirCoordFormName" type="text"></input></p>
+		<p>Teléfono:<input wicket:id="anadirCoordFormTel" type="text"></input></p>
+		<p>Coordinador:<input wicket:id="anadirCoordFormCoord" type="text"></input></p>
+		<p>Turno:<span wicket:id="anadirCoordFormShift"></span></p>
+		<p>
+			<input wicket:id="anadirCoordFormSubmit" type="submit" value="Añadir" />
+			<input type="reset" value="Limpiar Datos" />
+		</p>
+		<p><span wicket:id="anadirCoordFormError"></span></p>
+	</form>
+</div>
+</wicket:panel>
+</html>
+  

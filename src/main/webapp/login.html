@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>Iniciar sesión - LabControl</title>
+<style type="text/css">
+body {
+	margin: 20px 0px 0px;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #737373;
+}
+
+.mainTable {
+	border-top: thick solid #0048BE;
+	border-bottom: thick solid #F30000;
+	border-left: thick solid #0048BE;
+	border-right: thick solid #F30000;
+}
+
+.unefaLogo {
+	background: #FFFFFF url(images/unefa_escudo_small.jpg) center no-repeat;
+	width: 200px;
+	height: 230px;
+}
+
+.pageTitle {
+	font-size: 24px;
+}
+</style>
+</head>
+<body>
+<table class="mainTable" align="center">
+<tbody>
+<tr>
+<td rowspan="2" style="border-right: thin dotted #949494;">
+<div class="unefaLogo"></div>
+</td>
+<td align="center" style="border-bottom:thin dotted #949494;">
+<div class="pageTitle">Sistema de Administración de Laboratorios</div>
+</td>
+</tr>
+<tr>
+<td>
+<form action="j_security_check" method="post">
+<table cellspacing="15px" align="center">
+<tbody>
+<tr>
+<td>
+Usuario:
+</td>
+<td>
+<input type="text" name="j_username">
+</td>
+</tr>
+<tr>
+<td>
+Contraseña:
+</td>
+<td>
+<input type="password" name="j_password">
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<input type="submit" value="Login">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

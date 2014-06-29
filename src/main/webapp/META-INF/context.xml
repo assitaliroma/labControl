@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context path="/labControl" docBase="labControl"
+   crossContext="true" reloadable="true" debug="99">
+
+<Logger className="org.apache.catalina.logger.SystemOutLogger"
+		verbosity="4"/>
+<!--<Realm className="org.apache.catalina.realm.JDBCRealm" debug="99"-->
+<!--      driverName="org.postgresql.Driver"-->
+<!--   connectionURL="jdbc:postgresql://localhost:5432/labcontrol_db?user=security_user&amp;password=labControl"-->
+<!--	   userTable="usuarios" userNameCol="usuario" userCredCol="credencial"-->
+<!--	   userRoleTable="usuario_rol" roleNameCol="rol"/>-->
+
+<Resource name="jdbc/labcontrolSecurity" auth="Container"
+          type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+          url="jdbc:postgresql://localhost:5432/labcontrol_db"
+          username="security_user" password="labcontrol" maxActive="20" maxIdle="10"
+maxWait="-1"/>
+<Realm className="org.apache.catalina.realm.DataSourceRealm" debug="99"
+	   dataSourceName="jdbc/labcontrolSecurity" localDataSource="true"
+	   userTable="usuarios" userNameCol="usuario" userCredCol="credencial"
+	   userRoleTable="usuario_rol" roleNameCol="rol"/>
+
+</Context>

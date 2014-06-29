@@ -1,0 +1,20 @@
+<html xmlns:wicket>
+<wicket:panel>
+<h2 class="title">Añadir Profesor</h2>
+<div class="entry anadirEntry">
+	<form wicket:id="anadirProfesorForm">
+		<p>Nombre:<input wicket:id="anadirProfesorFormName" type="text"></input></p>
+		<p>Teléfono:<input wicket:id="anadirProfesorFormTel" type="text"></input></p>
+		<p>Coordinacion:<select wicket:id="anadirProfesorFormCoord"></select></p>
+		<p>Turno:<span wicket:id="anadirProfesorFormShift"></span></p>
+		<p>Término:<span wicket:id="anadirProfesorFormTerm"></span></p>
+		<p>
+			<input wicket:id="anadirProfesorFormSubmit" type="submit" value="Añadir" />
+			<input type="reset" value="Limpiar Datos" />
+		</p>
+		<p><span wicket:id="anadirProfesorFormError"></span></p>
+	</form>
+</div>
+</wicket:panel>
+</html>
+  
